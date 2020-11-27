@@ -1,0 +1,33 @@
+{
+  "name": "producer-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --color && concurrently -r -n \"Webpack,Nodemon\" \"npm run webpack-watch\" \"npm run server-watch\"",
+    "webpack-watch": "webpack --watch --color",
+    "server-watch": "nodemon --watch dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/kafkajs": "^1.9.0",
+    "@types/node": "^14.14.10",
+    "concurrently": "^5.3.0",
+    "fork-ts-checker-webpack-plugin": "^6.0.4",
+    "nodemon": "^2.0.6",
+    "ts-loader": "^8.0.11",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2",
+    "webpack": "^5.8.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.2",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "dependencies": {
+    "kafkajs": "^1.15.0",
+    "tsconfig-paths": "^3.9.0"
+  }
+}
